@@ -4,7 +4,6 @@ library(gtools)
 library(rintrojs)
 library(plotly)
 library(viridis)
-library(scico)
 
 
 # # Step 1: Let's get Rank players by court region-Step 3 in empirical-lpl-demo.Rmd
@@ -1304,7 +1303,12 @@ server <- function(input, output, session) {
       ggplot2::geom_polygon()  +
       ggplot2::geom_path(color = "black") +
       ggplot2::coord_equal() +
-      scale_fill_scico_d(palette = 'roma', name = "Rank Correspondence") +
+      ggplot2::scale_fill_brewer(type = "div",
+                                 palette = "RdBu",
+                                 direction = 1,
+                                 na.value = "grey60",
+                                 name = "Rank\nCorrespondence",
+                                 drop = FALSE) +
       ggplot2::theme(axis.line=ggplot2::element_blank(),
                      axis.text.x=ggplot2::element_blank(),
                      axis.text.y=ggplot2::element_blank(),
@@ -1449,8 +1453,7 @@ server <- function(input, output, session) {
                      legend.position = "right",
                      plot.title = ggplot2::element_text(hjust = 0.5,
                                                         vjust = 0,
-                                                        size = 16,
-                                                        face = "bold"),
+                                                        size = 16),
                      plot.margin = ggplot2::unit(c(0, 0, 0, 0), "cm"),
                      panel.spacing.y = ggplot2::unit(0, "cm"),
                      text=element_text(family="Avenir")) + 
@@ -1476,8 +1479,7 @@ server <- function(input, output, session) {
                      panel.grid.minor=ggplot2::element_blank(),
                      plot.title = ggplot2::element_text(hjust = 0.5, 
                                                         vjust = 0,
-                                                        size = 16,
-                                                        face = "bold"),
+                                                        size = 16),
                      strip.text = ggplot2::element_text(size = 16), 
                      strip.background = ggplot2::element_blank(),
                      legend.text = ggplot2::element_text(size = 14),
@@ -1628,7 +1630,10 @@ server <- function(input, output, session) {
       ggplot2::geom_polygon()  +
       ggplot2::geom_path(color = "black") +
       ggplot2::coord_equal() +
-      scale_fill_scico(palette = 'roma', name = "PLC per 36") +
+      ggplot2::scale_fill_gradient2(low = "blue",
+                                    high = "red",
+                                    mid = "white", midpoint = 0,
+                                    name = "PLC per 36") +
       ggplot2::theme(axis.line=ggplot2::element_blank(),
                      axis.text.x=ggplot2::element_blank(),
                      axis.text.y=ggplot2::element_blank(),
@@ -1658,7 +1663,10 @@ server <- function(input, output, session) {
       ggplot2::geom_polygon()  +
       ggplot2::geom_path(color = "black") +
       ggplot2::coord_equal() +
-      scale_fill_scico(palette = 'roma', name = "PLC per Shot") +
+      ggplot2::scale_fill_gradient2(low = "blue",
+                                    high = "red",
+                                    mid = "white", midpoint = 0,
+                                    name = "PLC per Shot") +
       ggplot2::theme(axis.line=ggplot2::element_blank(),
                      axis.text.x=ggplot2::element_blank(),
                      axis.text.y=ggplot2::element_blank(),
