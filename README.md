@@ -4,7 +4,5 @@
 
 - Full Description of Plots/Metrics [here](https://github.com/nsandholtz/lpl)
 
-- Future Work includes creating a button that the user can click on to switch from empirical plots to model-based plots.
-
 
 
