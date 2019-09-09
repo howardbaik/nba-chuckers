@@ -1,0 +1,13 @@
+name: nba-chuckers
+title: nba-chuckers
+username:
+account: howiebaek
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1166749
+bundleId: 2400137
+url: https://howiebaek.shinyapps.io/nba-chuckers/
+when: 1568049483.82459
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: README.html|README.md

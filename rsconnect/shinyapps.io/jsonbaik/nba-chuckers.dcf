@@ -1,0 +1,13 @@
+name: nba-chuckers
+title: nba-chuckers
+username:
+account: jsonbaik
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 819689
+bundleId: 2334150
+url: https://jsonbaik.shinyapps.io/nba-chuckers/
+when: 1566219714.35565
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: README.html|README.md
